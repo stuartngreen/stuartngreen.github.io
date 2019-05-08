@@ -1,0 +1,80 @@
+.game-controls {
+  background-color: #cfdfe5;
+  color: #123a4a;
+  display: inline-block;
+  padding: 7px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: 100%; }
+  .game-controls label {
+    padding: 0 3px 0 15px; }
+    .game-controls label:first-child {
+      padding-left: 0; }
+  .game-controls input[type=text] {
+    background-color: #345f70;
+    border: 0;
+    border-top: 1px solid #001736;
+    border-left: 1px solid #001736;
+    border-radius: 2px;
+    color: rgba(0, 238, 255, 0.7);
+    padding: 4px 6px 3px 6px;
+    position: relative;
+    top: 1px;
+    width: 50px; }
+    .game-controls input[type=text]:focus {
+      color: #00eeff; }
+  .game-controls button {
+    background-image: linear-gradient(#fff, #e7f0f2);
+    border: 1px solid #aac3cd;
+    border-radius: 2px;
+    box-shadow: 0px 1px 2px 0px rgba(196, 196, 196, 0.5);
+    color: #001754;
+    cursor: pointer;
+    font: inherit;
+    height: 25px;
+    margin: 0 2px;
+    padding: 3px 10px;
+    text-align: center; }
+    .game-controls button:hover {
+      background-image: linear-gradient(#fff, #f5f9fa);
+      color: #005ead; }
+    .game-controls button:active {
+      background-image: linear-gradient(#f5f9fa, #fff); }
+    .game-controls button.icon-button {
+      font-size: 12px;
+      padding: 6px 0;
+      width: 30px; }
+
+#output {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center; }
+
+.game-table {
+  border-collapse: collapse; }
+  .game-table td {
+    border: 1px solid #001736;
+    box-sizing: border-box;
+    height: 7px;
+    padding: 0;
+    width: 7px; }
+    .game-table td.live {
+      background-color: #1aea42; }
+    .game-table td.dead {
+      background-color: #001736; }
+
+* {
+  box-sizing: border-box; }
+
+body, html {
+  height: 100%;
+  overflow: hidden; }
+
+body {
+  background-color: #001736;
+  color: #97c2c6;
+  font: 13px/18px 'Rubik', sans-serif;
+  margin: 0; }

@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Conway's Game of Life - TypeScript Version</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./dist/styles.css" />
+</head>
+
+<body>
+
+    <div id="output"></div>
+
+    <div class="game-controls">
+        <label><strong>Settings:</strong></label>
+        <label>Height:</label>
+        <input id="heightInput" type="text" />
+        <label>Width:</label>
+        <input id="widthInput" type="text" />
+        <label>Speed:</label>
+        <input id="speedInput" type="text" /> ms &nbsp;
+        <button onclick="GameOfLife.applyChanges()" title="Reinitialise game with new settings">Apply</button>
+        <button class="icon-button" onclick="GameOfLife.resetGame()" title="Reset to defaults"><i class="fas fa-redo-alt"></i></button>
+        
+        <label>&nbsp; <strong>Controls:</strong></label>
+        <button class="icon-button" onclick="GameOfLife.playGame()" title="Play"><i class="fas fa-play"></i></button>
+        <button class="icon-button" onclick="GameOfLife.stopGame()" title="Stop"><i class="fas fa-stop"></i></button>
+    </div>
+
+</body>
+
+<script src="./dist/bundle.js"></script>
+<script>GameOfLife.main();</script>
+
+</html>

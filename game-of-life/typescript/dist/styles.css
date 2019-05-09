@@ -47,6 +47,9 @@
     .game-controls button.icon-button {
       padding: 0 7px;
       width: 25px; }
+  .game-controls .current-iteration {
+    display: inline-block;
+    width: 35px; }
 
 #output {
   display: flex;

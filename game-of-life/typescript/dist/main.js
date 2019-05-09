@@ -45,6 +45,7 @@ function updateViewHtml() {
             htmlCell.setAttribute('class', cell.isAlive ? 'live' : 'dead');
         }
     }
+    document.getElementById('currentIteration').innerHTML = String(game.currentIteration);
 }
 function initGame() {
     var outputDiv = document.getElementById('output');

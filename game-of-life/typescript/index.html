@@ -23,10 +23,10 @@
         <input id="speedInput" type="text" /> ms &nbsp;
         <button onclick="GameOfLife.applyChanges()" title="Reinitialise game with new settings">Apply</button>
         <button class="icon-button" onclick="GameOfLife.resetGame()" title="Reset to defaults"><i class="fas fa-redo-alt"></i></button>
-        
         <label>&nbsp; <strong>Controls:</strong></label>
         <button class="icon-button" onclick="GameOfLife.playGame()" title="Play"><i class="fas fa-play"></i></button>
         <button class="icon-button" onclick="GameOfLife.stopGame()" title="Stop"><i class="fas fa-stop"></i></button>
+        <label>&nbsp; Current iteration: <span id="currentIteration" class="current-iteration">0</span></label>
     </div>
 
 </body>

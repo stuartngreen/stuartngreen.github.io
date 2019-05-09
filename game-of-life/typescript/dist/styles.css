@@ -1,5 +1,5 @@
 .game-controls {
-  background-color: #cfdfe5;
+  background-color: #f0f3f2;
   color: #123a4a;
   display: inline-block;
   padding: 7px 0;
@@ -13,39 +13,43 @@
     .game-controls label:first-child {
       padding-left: 0; }
   .game-controls input[type=text] {
-    background-color: #345f70;
+    background-color: #fff;
     border: 0;
-    border-top: 1px solid #001736;
-    border-left: 1px solid #001736;
+    border-top: 1px solid #91a29b;
+    border-left: 1px solid #91a29b;
     border-radius: 2px;
-    color: rgba(0, 238, 255, 0.7);
+    color: #227b93;
+    font: inherit;
+    font-weight: bold;
     padding: 4px 6px 3px 6px;
     position: relative;
     top: 1px;
     width: 50px; }
     .game-controls input[type=text]:focus {
-      color: #00eeff; }
+      color: blue; }
   .game-controls button {
-    background-image: linear-gradient(#fff, #e7f0f2);
-    border: 1px solid #aac3cd;
+    background: linear-gradient(to bottom, #f7f7f7 0%, #ddd 100%);
+    border: 1px solid #9c9c9c;
     border-radius: 2px;
-    box-shadow: 0px 1px 2px 0px rgba(196, 196, 196, 0.5);
-    color: #001754;
+    box-sizing: border-box;
     cursor: pointer;
     font: inherit;
     height: 25px;
-    margin: 0 2px;
-    padding: 3px 10px;
-    text-align: center; }
+    outline: 0;
+    padding: 0 8px;
+    position: relative;
+    top: -1px; }
     .game-controls button:hover {
-      background-image: linear-gradient(#fff, #f5f9fa);
-      color: #005ead; }
+      border-color: #7b7b7b;
+      box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+      color: #227b93; }
     .game-controls button:active {
-      background-image: linear-gradient(#f5f9fa, #fff); }
+      box-shadow: none;
+      color: #ff6c00; }
     .game-controls button.icon-button {
-      font-size: 12px;
-      padding: 6px 0;
-      width: 30px; }
+      padding: 0 7px;
+      width: 25px;
+      top: 0; }
 
 #output {
   display: flex;
@@ -56,7 +60,7 @@
 .game-table {
   border-collapse: collapse; }
   .game-table td {
-    border: 1px solid #001736;
+    border: 1px solid #032c44;
     box-sizing: border-box;
     height: 7px;
     padding: 0;
@@ -64,7 +68,7 @@
     .game-table td.live {
       background-color: #1aea42; }
     .game-table td.dead {
-      background-color: #001736; }
+      background-color: #032c44; }
 
 * {
   box-sizing: border-box; }
@@ -74,7 +78,7 @@ body, html {
   overflow: hidden; }
 
 body {
-  background-color: #001736;
+  background-color: #032c44;
   color: #97c2c6;
-  font: 13px/18px 'Rubik', sans-serif;
+  font: 11px/17px 'Roboto Mono', monospace;
   margin: 0; }

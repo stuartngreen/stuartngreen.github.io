@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const game_1 = require("./models/game");
-let defaults = { height: 85, width: 125, speed: 100 };
+let defaults = { height: 65, width: 85, speed: 50 };
 let game;
 let iterate;
 let gameInProgress = false;

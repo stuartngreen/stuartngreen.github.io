@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const game_1 = require("./models/game");
-let defaults = { height: 65, width: 85, speed: 50 };
-let game;
-let iterate;
-let gameInProgress = false;
+var game_1 = require("./models/game");
+var defaults = { height: 65, width: 85, speed: 50 };
+var game;
+var iterate;
+var gameInProgress = false;
 function main() {
     setDefaults();
     initGame();
@@ -16,7 +16,7 @@ function setDefaults() {
     document.getElementById('speedInput').value = String(defaults.speed);
 }
 function getSettings() {
-    let settings = {
+    var settings = {
         width: parseInt(document.getElementById('widthInput').value),
         height: parseInt(document.getElementById('heightInput').value),
         speed: parseInt(document.getElementById('speedInput').value)
@@ -24,13 +24,13 @@ function getSettings() {
     return settings;
 }
 function buildTableHtml(game) {
-    let table = document.createElement('table');
+    var table = document.createElement('table');
     table.setAttribute('class', 'game-table');
-    for (let r = 0; r < game.grid.height; r++) {
-        let tr = document.createElement('tr');
-        for (let c = 0; c < game.grid.width; c++) {
-            let td = document.createElement('td');
-            td.setAttribute('id', `row-${r}-col-${c}`);
+    for (var r = 0; r < game.grid.height; r++) {
+        var tr = document.createElement('tr');
+        for (var c = 0; c < game.grid.width; c++) {
+            var td = document.createElement('td');
+            td.setAttribute('id', "row-" + r + "-col-" + c);
             tr.appendChild(td);
         }
         table.appendChild(tr);
@@ -38,18 +38,18 @@ function buildTableHtml(game) {
     return table;
 }
 function updateViewHtml() {
-    for (let r = 0; r < game.grid.height; r++) {
-        for (let c = 0; c < game.grid.width; c++) {
-            let cell = game.grid.getCell(r, c);
-            let htmlCell = document.getElementById(`row-${r}-col-${c}`);
+    for (var r = 0; r < game.grid.height; r++) {
+        for (var c = 0; c < game.grid.width; c++) {
+            var cell = game.grid.getCell(r, c);
+            var htmlCell = document.getElementById("row-" + r + "-col-" + c);
             htmlCell.setAttribute('class', cell.isAlive ? 'live' : 'dead');
         }
     }
 }
 function initGame() {
-    let outputDiv = document.getElementById('output');
+    var outputDiv = document.getElementById('output');
     outputDiv.innerHTML = '';
-    let settings = getSettings();
+    var settings = getSettings();
     game = new game_1.Game(settings.height, settings.width, settings.speed, 0);
     outputDiv.append(buildTableHtml(game));
     updateViewHtml();
@@ -57,7 +57,7 @@ function initGame() {
 exports.initGame = initGame;
 function playGame() {
     if (!gameInProgress) {
-        iterate = setInterval(() => {
+        iterate = setInterval(function () {
             if (game.currentIteration < game.maxIterations) {
                 game.nextIteration();
                 game.currentIteration++;

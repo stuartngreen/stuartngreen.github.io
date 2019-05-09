@@ -23,7 +23,6 @@
     font-weight: bold;
     padding: 4px 6px 3px 6px;
     position: relative;
-    top: 1px;
     width: 50px; }
     .game-controls input[type=text]:focus {
       color: blue; }
@@ -35,7 +34,6 @@
     cursor: pointer;
     font: inherit;
     height: 25px;
-    outline: 0;
     padding: 0 8px;
     position: relative;
     top: -1px; }
@@ -48,8 +46,7 @@
       color: #ff6c00; }
     .game-controls button.icon-button {
       padding: 0 7px;
-      width: 25px;
-      top: 0; }
+      width: 25px; }
 
 #output {
   display: flex;
